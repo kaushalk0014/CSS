@@ -1,16 +1,93 @@
 <!DOCTYPE html>
-<html></html>
-<head>
-    <title>CSS Positioning</title>
-    
-</head>
-<body>
-    <div class="container">
-        <div class="box static">Static</div>
-        <div class="box relative">Relative</div>
-        <div class="box absolute">Absolute</div>
-    </div>
+<html>
 
-    <div class="box fixed">Fixed</div>
+</html>
+
+<head>
+  <title>CSS Positioning</title>
+
+</head>
+
+<body>
+  <div class="header">
+    <h3>CSS Positioning</h3>
+    <h4>1. static - This is default
+      relative,
+      fixed,
+      absolute,
+      sticky
+    </h4>
+  </div>
+  <div class="container">
+    <div class="box red">red</div>
+    <div class="box green">green</div>
+    <div class="box yellow">yellow</div>
+  </div>
+
+  <div class="outerDiv">outerDiv</div>
+
+
 </body>
+
+<style>
+  .header {
+    background-color: #f0f0f0;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    background-color: #baddff;
+    /* top → right → bottom → left */
+    margin: 100px 50px 0px 100px;
+  }
+
+  .box {
+    /* border: 2px solid black; */
+    height: 100px;
+    width: 100px;
+    color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+  }
+
+  .red {
+    /* relative positioning  working on based on parent element*/
+    background-color: red;
+    position: relative;
+    left: 100px;
+    top: 100px;
+  }
+
+  .green {
+    /*
+      absolute positioning working on based main hTML page
+      absolute positioning from top corner of the page
+    */
+    background-color: green;
+    position: absolute;
+    /* left: 150px;
+    top: 150px; */
+    bottom: 0px;
+    right: 0px;
+  
+  }
+
+  .yellow {
+    background-color: rgb(229, 229, 12);
+  }
+
+  .outerDiv{
+    position: fixed;
+    height: 300vh;
+    background-color: purple;
+  }
+
+</style>
+
 </html>
